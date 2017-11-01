@@ -1,6 +1,6 @@
 <h2>All Projects</h2>
 
-<div *ngFor="let project of projects | async" (click)="goToDetail(project)" class="panel panel-default">
+<div *ngFor="let project of projects | async | category:'All'" (click)="goToDetail(project)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{project.name}}</em></h3>
     <p>{{project.description}}</p>
