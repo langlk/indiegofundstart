@@ -3,7 +3,7 @@ export class Project {
 
   constructor(
     public name: string,
-    public creater: string,
+    public creator: string,
     public description: string,
     public fundingGoal: number,
     public fundingUse: string,
