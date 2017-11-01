@@ -2,4 +2,9 @@
   <h3>{{(projectToDisplay | async).name}}</h3>
   <h4>{{(projectToDisplay | async).creator}}</h4>
   <p>{{(projectToDisplay | async).description}}</p>
+  <p><strong>Goal:</strong> ${{(projectToDisplay | async).fundingGoal}}</p>
+  <p><strong>Current amount raised:</strong> ${{(projectToDisplay | async).fundingCurrent}}</p>
+  <p><strong>Funds will be used on:</strong> {{(projectToDisplay | async).fundingUse}}</p>
+  <p><strong>What you get:</strong> {{(projectToDisplay | async).backerAwards}}</p>
+  <p><strong>Type of project:</strong> {{(projectToDisplay | async).category}}</p>
 </div>
