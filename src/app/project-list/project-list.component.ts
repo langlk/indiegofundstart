@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 import { Project } from '../project.model';
 import { ProjectService } from '../project.service';
@@ -13,10 +14,14 @@ import { ProjectService } from '../project.service';
 export class ProjectListComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
 
-  constructor(private projectService: ProjectService) { }
+  constructor(private projectService: ProjectService, private router: Router) { }
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
+  }
+
+  goToDetail(project) {
+    this.router.navigate(['project', project.$key]);
   }
 
 }
