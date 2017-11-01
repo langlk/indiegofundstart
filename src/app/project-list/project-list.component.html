@@ -1,6 +1,13 @@
 <h2>All Projects</h2>
+<select (change)="onChange($event.target.value)">
+  <option value="All">All Projects</option>
+  <option value="Product">Products</option>
+  <option value="Art">Art</option>
+  <option value="Charitable">Charitable</option>
+  <option value="Personal">Personal</option>
+</select>
 
-<div *ngFor="let project of projects | async | category:'All'" (click)="goToDetail(project)" class="panel panel-default">
+<div *ngFor="let project of projects | async | category:categoryFilter" (click)="goToDetail(project)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{project.name}}</em></h3>
     <p>{{project.description}}</p>

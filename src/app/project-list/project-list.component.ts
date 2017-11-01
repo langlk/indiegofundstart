@@ -13,6 +13,7 @@ import { ProjectService } from '../project.service';
 })
 export class ProjectListComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
+  categoryFilter: string = "All";
 
   constructor(private projectService: ProjectService, private router: Router) { }
 
@@ -22,6 +23,10 @@ export class ProjectListComponent implements OnInit {
 
   goToDetail(project) {
     this.router.navigate(['project', project.$key]);
+  }
+
+  onChange(option) {
+    this.categoryFilter = option;
   }
 
 }
