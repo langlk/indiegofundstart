@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { CategoryPipe } from './category.pipe';
+import { FundComponent } from './fund/fund.component';
+import { NewProjectComponent } from './new-project/new-project.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +26,9 @@ export const firebaseConfig = {
     AppComponent,
     ProjectListComponent,
     ProjectDetailComponent,
-    CategoryPipe
+    CategoryPipe,
+    FundComponent,
+    NewProjectComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,48 @@
+<h3>Propose a New Project!</h3>
+<div class="form-group">
+  <div>
+    <label>Project Name:</label>
+    <br>
+    <input #newName class="form-control">
+  </div>
+
+  <div>
+    <label>Project Creator:</label>
+    <br>
+    <input #newCreator class="form-control">
+  </div>
+
+  <div>
+    <label>Project Description:</label>
+    <br>
+    <input #newDescription class="form-control">
+  </div>
+
+  <div>
+    <label>Project Funding Goal:</label>
+    <br>
+    <input #newFundingGoal class="form-control">
+  </div>
+
+  <div>
+    <label>Project Funds Purpose:</label>
+    <br>
+    <input #newFundingUse class="form-control">
+  </div>
+
+  <div>
+    <label>Project Rewards:</label>
+    <br>
+    <input #newBackerAward class="form-control">
+  </div>
+  <div>
+    <label>Category</label>
+    <select #newCategory class="form-control" name="newCategory">
+      <option value="Product">Product</option>
+      <option value="Art">Art</option>
+      <option value="Charitable">Charitable</option>
+      <option value="Personal">Personal</option>
+    </select>
+  </div>
+  <button (click)="addProject(newName.value, newCreator.value, newDescription.value, newFundingGoal.value, newFundingUse.value, newBackerAward.value, newCategory.value); newName.value=''; newCreator.value=''; newDescription.value=''; newFundingGoal.value=''; newFundingUse.value=''; newBackerAward.value=''; newCategory.value='';" type="button" class="btn">Add!</button>
+</div>
