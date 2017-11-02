@@ -23,4 +23,9 @@ export class ProjectService {
     this.projects.push(project);
   }
 
+  updateProject(project) {
+    var projectInFirebase = this.getProjectByID(project.$key);
+    projectInFirebase.update({fundingCurrent: project.fundingCurrent});
+  }
+
 }

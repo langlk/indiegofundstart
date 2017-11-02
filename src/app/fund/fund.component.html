@@ -1,3 +1,8 @@
-<p>
-  fund works!
-</p>
+<div>
+  <h3>Fund {{project.name}}!</h3>
+  <form>
+    <label for="amount">Amount to pledge:</label>
+    <input #amount name="amount" class="form-control" type="number">
+    <button (click)="fundProject(amount.value); amount.value=''" class="btn" type="button" name="button">Pledge</button>
+  </form>
+</div>

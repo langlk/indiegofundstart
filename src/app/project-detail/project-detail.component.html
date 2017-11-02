@@ -8,3 +8,5 @@
   <p><strong>What you get:</strong> {{(projectToDisplay | async).backerAwards}}</p>
   <p><strong>Type of project:</strong> {{(projectToDisplay | async).category}}</p>
 </div>
+<hr>
+<app-fund [project]="(projectToDisplay | async)"></app-fund>

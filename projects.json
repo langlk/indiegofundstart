@@ -4,8 +4,8 @@
       "name": "Whack-a-Pol",
       "creator": "Bob Bobbington",
       "description": "Whack-a-Mole, but with politicians!",
-      "fundingGoal": "5000",
-      "fundingCurrent": "0",
+      "fundingGoal": 5000,
+      "fundingCurrent": 0,
       "fundingUse": "Design molds and production costs.",
       "backerAwards": "Choose politicians to include.",
       "category": "Product"
@@ -14,8 +14,8 @@
       "name": "Kung Fury 3",
       "creator": "John Smith",
       "description": "More Kung Fury!",
-      "fundingGoal": "10000",
-      "fundingCurrent": "0",
+      "fundingGoal": 10000,
+      "fundingCurrent": 0,
       "fundingUse": "Sets and production costs.",
       "backerAwards": "Digital copy of movie.",
       "category": "Art"
@@ -24,8 +24,8 @@
       "name": "GoatFundMe",
       "creator": "Cordelia Green",
       "description": "Donate a goat to a needy family!",
-      "fundingGoal": "15000",
-      "fundingCurrent": "0",
+      "fundingGoal": 15000,
+      "fundingCurrent": 0,
       "fundingUse": "Cost of goats and husbandry training for recipients.",
       "backerAwards": "Picture of goat.",
       "category": "Charitable"
@@ -34,8 +34,8 @@
       "name": "Deprogram Tom Cruise",
       "creator": "Katie Holmes",
       "description": "Self-explanatory. Please Halp.",
-      "fundingGoal": "20000",
-      "fundingCurrent": "0",
+      "fundingGoal": 20000,
+      "fundingCurrent": 0,
       "fundingUse": "Cost of therapy.",
       "backerAwards": "The ability to watch Legend without cringing.",
       "category": "Personal"
