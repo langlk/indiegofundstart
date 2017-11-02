@@ -7,6 +7,10 @@
   <option value="Personal">Personal</option>
 </select>
 
+<div *ngIf="(projects | async | featured:featuredFilter).length === 0">
+  <h3>Welcome To IndieGoFundStart!</h3>
+  <p>There are currently no featured projects. Please feel free to browse categories above.</p>
+</div>
 <div *ngFor="let project of projects | async | category:categoryFilter | featured:featuredFilter"  class="panel panel-default">
   <div class="panel-body">
     <h5 *ngIf="project.featured" class="text-primary">Featured!</h5>
