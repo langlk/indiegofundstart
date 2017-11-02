@@ -1,4 +1,4 @@
-<h2>{{categoryFilter.charAt(0).toUpperCase()+categoryFilter.slice(1)}} Projects</h2>
+<h2>{{title}} Projects</h2>
 <select *ngIf="currentRoute === '/admin'" (change)="onChange($event.target.value)">
   <option value="All">All Projects</option>
   <option value="Product">Products</option>
@@ -7,7 +7,7 @@
   <option value="Personal">Personal</option>
 </select>
 
-<div *ngFor="let project of projects | async | category:categoryFilter"  class="panel panel-default">
+<div *ngFor="let project of projects | async | category:categoryFilter | featured:featuredFilter"  class="panel panel-default">
   <div class="panel-body">
     <h5 *ngIf="project.featured" class="text-primary">Featured!</h5>
     <h3 (click)="goToDetail(project)"><em>{{project.name}}</em></h3>

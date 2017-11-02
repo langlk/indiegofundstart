@@ -10,7 +10,7 @@ export class CategoryPipe implements PipeTransform {
     if (input === null) {
       return [];
     }
-    if (categoryType === "All") {
+    if (categoryType.toLowerCase() === "all") {
       return input;
     } else {
       var output = [];

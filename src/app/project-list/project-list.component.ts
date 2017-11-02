@@ -17,8 +17,9 @@ export class ProjectListComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
   categoryFilter: string;
-
+  featuredFilter: string = "All";
   projectToEdit: Project;
+  title: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,11 +28,19 @@ export class ProjectListComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+
     this.projects = this.projectService.getProjects();
     this.route.params.forEach((urlParameters) => {
       this.categoryFilter = urlParameters['name'];
       if (!this.categoryFilter) {
         this.categoryFilter = "All";
+      }
+      if (this.currentRoute === "/") {
+        this.featuredFilter = "featured";
+        this.title = "Featured";
+      } else {
+        this.featuredFilter = "All";
+        this.title = this.categoryFilter.charAt(0).toUpperCase()+this.categoryFilter.slice(1);
       }
     });
   }
