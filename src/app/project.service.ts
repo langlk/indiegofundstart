@@ -25,7 +25,16 @@ export class ProjectService {
 
   updateProject(project) {
     var projectInFirebase = this.getProjectByID(project.$key);
-    projectInFirebase.update({fundingCurrent: project.fundingCurrent});
+    projectInFirebase.update({
+      name: project.name,
+      creator: project.creator,
+      description: project.description,
+      fundingGoal: project.fundingGoal,
+      fundingCurrent: project.fundingCurrent,
+      fundingUse: project.fundingUse,
+      backerAwards: project.backerAwards,
+      category: project.category
+    });
   }
 
   delete(project) {

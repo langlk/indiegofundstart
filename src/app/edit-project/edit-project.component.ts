@@ -17,6 +17,10 @@ export class EditProjectComponent implements OnInit {
   ngOnInit() {
   }
 
+  update() {
+    this.projectService.updateProject(this.project);
+  }
+
   delete() {
     if(confirm("Are you sure you want to delete this project?")){
       this.projectService.delete(this.project);
