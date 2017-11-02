@@ -14,6 +14,7 @@ import { ProjectService } from '../project.service';
 export class ProjectListComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
   categoryFilter: string = "All";
+  currentRoute: string = this.router.url;
 
   constructor(private projectService: ProjectService, private router: Router) { }
 

@@ -7,9 +7,12 @@
   <option value="Personal">Personal</option>
 </select>
 
-<div *ngFor="let project of projects | async | category:categoryFilter" (click)="goToDetail(project)" class="panel panel-default">
+<div *ngFor="let project of projects | async | category:categoryFilter"  class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{project.name}}</em></h3>
+    <h3 (click)="goToDetail(project)"><em>{{project.name}}</em></h3>
+    <div *ngIf="currentRoute === '/admin'">
+      <button (click)="startEdit(project)" type="button" class="btn">Edit or Delete</button>
+    </div>
     <p>{{project.description}}</p>
   </div>
 </div>

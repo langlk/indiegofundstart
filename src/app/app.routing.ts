@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProjectDetailComponent } from './project-detail/project-detail.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { NewProjectComponent } from './new-project/new-project.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
   {
     path: 'new-project',
     component: NewProjectComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ];
 
