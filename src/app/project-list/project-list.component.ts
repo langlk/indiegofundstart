@@ -15,6 +15,7 @@ export class ProjectListComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
   categoryFilter: string = "All";
   currentRoute: string = this.router.url;
+  projectToEdit: Project;
 
   constructor(private projectService: ProjectService, private router: Router) { }
 
@@ -28,6 +29,10 @@ export class ProjectListComponent implements OnInit {
 
   onChange(option) {
     this.categoryFilter = option;
+  }
+
+  startEdit(project: Project) {
+    this.projectToEdit = project;
   }
 
 }

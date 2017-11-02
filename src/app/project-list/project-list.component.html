@@ -12,6 +12,10 @@
     <h3 (click)="goToDetail(project)"><em>{{project.name}}</em></h3>
     <div *ngIf="currentRoute === '/admin'">
       <button (click)="startEdit(project)" type="button" class="btn">Edit or Delete</button>
+      <app-edit-project
+        *ngIf="projectToEdit == project"
+        [project]="projectToEdit">
+      </app-edit-project>
     </div>
     <p>{{project.description}}</p>
   </div>

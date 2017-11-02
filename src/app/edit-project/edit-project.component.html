@@ -1,0 +1,48 @@
+<h3>Propose a New Project!</h3>
+<div class="form-group">
+  <div>
+    <label>Project Name:</label>
+    <br>
+    <input [(ngModel)]="project.name" name="name" class="form-control">
+  </div>
+
+  <div>
+    <label>Project Creator:</label>
+    <br>
+    <input [(ngModel)]="project.creator" name="creator" class="form-control">
+  </div>
+
+  <div>
+    <label>Project Description:</label>
+    <br>
+    <textarea [(ngModel)]="project.description" name="description" class="form-control"></textarea>
+  </div>
+
+  <div>
+    <label>Project Funding Goal:</label>
+    <br>
+    <input [(ngModel)]="project.fundingGoal" name="fundingGoal" class="form-control">
+  </div>
+
+  <div>
+    <label>Project Funds Purpose:</label>
+    <br>
+    <input [(ngModel)]="project.fundingUse" name="fundingUse" class="form-control">
+  </div>
+
+  <div>
+    <label>Project Rewards:</label>
+    <br>
+    <input [(ngModel)]="project.backerAwards" name="backerAwards" class="form-control">
+  </div>
+  <div>
+    <label>Category</label>
+    <select [(ngModel)]="project.category" name="category" class="form-control" name="newCategory">
+      <option value="Product">Product</option>
+      <option value="Art">Art</option>
+      <option value="Charitable">Charitable</option>
+      <option value="Personal">Personal</option>
+    </select>
+  </div>
+  <button (click)="doneEditing()" type="button" class="btn">Update</button><button (click)="delete()" type="button" class="btn">Delete</button>
+</div>
