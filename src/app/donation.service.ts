@@ -10,4 +10,12 @@ export class DonationService {
     this.donations = database.list('donations');
   }
 
+  getDonations() {
+    return this.donations;
+  }
+
+  addDonation(donation) {
+    this.donations.push(donation);
+  }
+
 }

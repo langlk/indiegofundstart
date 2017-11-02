@@ -1,7 +1,9 @@
+import { Project } from './project.model';
+
 export class Donation {
 
   constructor(
-    public projectKey: string,
-    public amount: number
+    public amount: number,
+    public project: Project
   ) {}
 }

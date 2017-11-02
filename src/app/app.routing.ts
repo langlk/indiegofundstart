@@ -5,6 +5,7 @@ import { ProjectDetailComponent } from './project-detail/project-detail.componen
 import { ProjectListComponent } from './project-list/project-list.component';
 import { NewProjectComponent } from './new-project/new-project.component';
 import { AdminComponent } from './admin/admin.component';
+import { DonationsComponent } from './donations/donations.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'category/:name',
     component: ProjectListComponent
+  },
+  {
+    path: 'donations',
+    component: DonationsComponent
   }
 ];
 
