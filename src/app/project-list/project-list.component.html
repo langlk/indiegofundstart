@@ -1,5 +1,5 @@
 <h2>All Projects</h2>
-<select (change)="onChange($event.target.value)">
+<select *ngIf="currentRoute === '/admin'" (change)="onChange($event.target.value)">
   <option value="All">All Projects</option>
   <option value="Product">Products</option>
   <option value="Art">Art</option>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { Router } from '@angular/router';
 
@@ -13,14 +15,25 @@ import { ProjectService } from '../project.service';
 })
 export class ProjectListComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
-  categoryFilter: string = "All";
   currentRoute: string = this.router.url;
+  categoryFilter: string;
+
   projectToEdit: Project;
 
-  constructor(private projectService: ProjectService, private router: Router) { }
+  constructor(
+    private route: ActivatedRoute,
+    private location: Location,
+    private projectService: ProjectService,
+    private router: Router) { }
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();
+    this.route.params.forEach((urlParameters) => {
+      this.categoryFilter = urlParameters['name'];
+      if (!this.categoryFilter) {
+        this.categoryFilter = "All";
+      }
+    });
   }
 
   goToDetail(project) {

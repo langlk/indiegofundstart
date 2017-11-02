@@ -22,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'category/:name',
+    component: ProjectListComponent
   }
 ];
 
