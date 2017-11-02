@@ -28,4 +28,9 @@ export class ProjectService {
     projectInFirebase.update({fundingCurrent: project.fundingCurrent});
   }
 
+  delete(project) {
+    var projectInFirebase = this.getProjectByID(project.$key);
+    projectInFirebase.remove();
+  }
+
 }
