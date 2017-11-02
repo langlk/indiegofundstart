@@ -1,4 +1,4 @@
-<h2>All Projects</h2>
+<h2>{{categoryFilter.charAt(0).toUpperCase()+categoryFilter.slice(1)}} Projects</h2>
 <select *ngIf="currentRoute === '/admin'" (change)="onChange($event.target.value)">
   <option value="All">All Projects</option>
   <option value="Product">Products</option>
