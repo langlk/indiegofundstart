@@ -9,8 +9,10 @@
 
 <div *ngFor="let project of projects | async | category:categoryFilter"  class="panel panel-default">
   <div class="panel-body">
+    <h5 *ngIf="project.featured" class="text-primary">Featured!</h5>
     <h3 (click)="goToDetail(project)"><em>{{project.name}}</em></h3>
     <div *ngIf="currentRoute === '/admin'">
+      <button (click)="feature(project)" type="button" class="btn">Toggle Feature</button>
       <button (click)="startEdit(project)" type="button" class="btn">Edit or Delete</button>
       <app-edit-project
         *ngIf="projectToEdit == project"

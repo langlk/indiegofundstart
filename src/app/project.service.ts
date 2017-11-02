@@ -33,7 +33,8 @@ export class ProjectService {
       fundingCurrent: project.fundingCurrent,
       fundingUse: project.fundingUse,
       backerAwards: project.backerAwards,
-      category: project.category
+      category: project.category,
+      featured: project.featured
     });
   }
 

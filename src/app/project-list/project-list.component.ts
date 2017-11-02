@@ -48,4 +48,13 @@ export class ProjectListComponent implements OnInit {
     this.projectToEdit = project;
   }
 
+  feature(project: Project) {
+    if (project.featured) {
+      project.featured = false;
+    } else {
+      project.featured = true;
+    }
+    this.projectService.updateProject(project);
+  }
+
 }

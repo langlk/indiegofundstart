@@ -1,5 +1,6 @@
 export class Project {
   fundingCurrent: number = 0;
+  featured: boolean = false;
 
   constructor(
     public name: string,
