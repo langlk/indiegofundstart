@@ -45,9 +45,6 @@ _This is a community fund site based on the following popular apps: Kickstarter,
   ```
 * You can now open the site in your web browser at ```localhost:4200```.
 
-## Specifications
-
-*
 
 ## Support and contact details
 
